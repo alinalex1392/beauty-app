@@ -1,0 +1,64 @@
+<div
+     fxLayout="column"
+       fxLayoutAlign="start stretch"
+       fxFlex
+       fxLayoutGap="30px grid"
+
+     class="container">
+  <h3>Adauga  Angajati</h3>
+
+  <form
+        fxLayout="column"
+       fxLayoutAlign="start stretch"
+       fxFlex
+       fxLayoutGap="30px grid"
+      (ngSubmit)="onSubmit()" #heroForm="ngForm">
+
+    <mat-form-field appearance="legacy">
+      <mat-label>Nume</mat-label>
+      <input type="text" class="form-control" id="name"
+             required
+             [(ngModel)]="model.name" name="name"
+             placeholder="Nume"
+             matInput>
+
+    </mat-form-field>
+
+
+    <mat-form-field appearance="legacy">
+      <mat-label>Telefon</mat-label>
+      <input type="number" class="form-control" id="phoneNumber"
+             [(ngModel)]="model.phoneNumber" name="phoneNumber"
+             placeholder="Telefon"
+             matInput>
+     </mat-form-field>
+
+    <button mat-raised-button type="submit" class="btn btn-success" (click)="newEmployee(); heroForm.reset()" [disabled]="!heroForm.form.valid">Adauga</button>
+
+  </form>
+
+
+
+  <!--<form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+    <div class="form-group">
+      {{diagnostic}}
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name"
+             required
+             [(ngModel)]="model.name" name="name">
+      TODO: remove this: {{model.name}}>
+    </div>
+
+
+
+    <div class="form-group">
+      <label for="phoneNumber">Telefon</label>
+      <input type="number" class="form-control" id="phoneNumber"
+             [(ngModel)]="model.phoneNumber" name="phoneNumber">
+      TODO: remove this: {{model.phoneNumber}}>
+    </div>
+
+    <button type="submit" class="btn btn-success" (click)="newEmployee(); heroForm.reset()" [disabled]="!heroForm.form.valid">Submit</button>
+
+  </form>-->
+</div>

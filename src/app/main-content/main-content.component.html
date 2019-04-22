@@ -1,0 +1,29 @@
+<div class="flexDemoContainer">
+
+  <div fxLayout="column"
+       fxLayoutAlign="start stretch"
+       fxFlex
+       fxLayoutGap="15px grid">
+    <!--<div fxFlex style="background-color: coral">Item 1 </div>
+  <div fxFlex style="background-color: red">Item 2</div>
+
+  <div fxFlex style="background-color: blue">Item 3 </div>-->
+
+    <div fxflex  [fxLayoutGap]="layoutGap"  class="buttonGroup">
+      <a fxFlex="50 10 30" fxFill color="primary" fxLayoutAlign="center center" mat-raised-button routerLink="/agenda">Agenda</a>
+      <a fxFlex="50 10 30" fxFill color="accent" fxLayoutAlign="center center" mat-raised-button routerLink="/angajati">Angajati</a>
+      <a fxFlex="50 10 30" fxFill color="warm"  fxLayoutAlign="center center" mat-raised-button routerLink=".">Clienti</a>
+    </div>
+
+    <div fxflex [fxLayoutGap]="layoutGap" class="buttonGroup">
+      <a fxFlex="50 10 30" fxFill color="primary"  fxLayoutAlign="center center" mat-raised-button routerLink="/agenda">Agenda</a>
+      <a fxFlex="50 10 30" fxFill color="accent" fxLayoutAlign="center center" mat-raised-button routerLink="/angajati">Angajati</a>
+      <a fxFlex="50 10 30" fxFill color="warm" fxLayoutAlign="center center" mat-raised-button routerLink=".">Clienti</a>
+    </div>
+
+
+  </div>
+
+ 
+
+</div>

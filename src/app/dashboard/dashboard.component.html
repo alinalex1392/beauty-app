@@ -1,0 +1,96 @@
+<!--<div class="flexDemoContainer">
+  <div fxLayout="row" fxLayoutAlign="space-evenly none" fxFlex="50">
+    <div fxFlex style="background-color: coral">Item 1 </div>
+    <div fxFlex style="background-color: green">Item 2</div>
+
+    <div fxFlex style="background-color: blue">Item 3 </div>
+
+  </div>
+</div>-->
+
+  <div gdAreas="header header header | side1 content side2 | footer footer footer"
+       gdGap="30px"
+       gdRows="15% auto 10%"
+       gdColumns="10% 1fr 20%"
+       class="container">
+
+    <header gdArea="header">
+      <mat-card>EGO Beaty Salon</mat-card>
+    </header>
+
+
+    <div gdArea="side1">
+      Side 1
+    </div>
+    <div  gdArea="content">
+      <app-main-content></app-main-content>
+    </div>
+    <div gdArea="side2">
+      Side 2
+    </div>
+    
+    <footer gdArea="footer">
+      Footer
+    </footer>
+
+  </div>
+
+
+
+<!--<!doctype html>
+<title>Example</title>
+<style>
+  body {
+    display: grid;
+    grid-template-areas: "header header header" "side content side2" "footer footer footer";
+    grid-template-rows: 2fr 5fr 1fr;
+    grid-template-columns: 20% 1fr 20%;
+    grid-gap: 10px;
+    height: 100vh;
+    margin: 0;
+  }
+
+  header, footer, article, nav, div {
+    padding: 20px;
+    background: gold;
+  }
+
+  #pageHeader {
+    grid-area: header;
+  }
+
+  #pageFooter {
+    grid-area: footer;
+  }
+
+  #mainContent {
+    grid-area: content;
+  }
+
+  #mainSide {
+    grid-area: side;
+  }
+
+    #mainSide2 {
+    grid-area: side2;
+  }
+
+  #siteAds {
+    grid-area: ads;
+  }
+</style>
+<body>
+  <header id="pageHeader">Header</header>
+
+  <article id="mainContent">Content</article>
+
+  <div id="mainSide">Side 1</div>
+  <div id="mainSide2">Side 2</div>
+
+  <footer id="pageFooter">Footer</footer>
+</body>-->
+
+
+
+
+

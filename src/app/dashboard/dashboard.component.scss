@@ -1,0 +1,16 @@
+/*.flexDemoContainer {
+  border: solid 1px #red;
+  box-sizing: content-box !important;
+}*/
+
+.container {
+  height: 100vh;
+  margin: 0;
+}
+
+
+
+div > div, header, footer {
+  padding: 20px;
+  background: green;
+}
