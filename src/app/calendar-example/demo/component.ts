@@ -32,7 +32,7 @@ export class DemoComponent {
       title: 'An event',
       color: users[0].color,
       start: addHours(startOfDay(new Date()), 5),
-      end: addHours(startOfDay(new Date()), 7),
+      end: addHours(startOfDay(new Date()), 6),
       meta: {
         user: users[0]
       },
