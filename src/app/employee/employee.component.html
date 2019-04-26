@@ -1,52 +1,142 @@
-<div gdAreas="header header header | side1 content content | footer footer footer"
-     gdGap="30px"
-     gdRows="15% auto 10%"
-     gdColumns="20% 1fr 20%"
-     class="container">
+<div class="container-fluid">
 
-  <header gdArea="header">
-    <mat-card>Angajati</mat-card>
+
+  <!--<div class="row">
+    <div class="col-md-4">.col-md-4</div>
+    <div class="col-md-4">.col-md-4</div>
+    <div class="col-md-4">.col-md-4</div>
+  </div>-->
+
+  <header>
+
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark pink scrolling-navbar">
+      <a class="navbar-brand" href="#"><strong>Navbar</strong></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Opinions</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav nav-flex-icons">
+          <li class="nav-item">
+            <a class="nav-link"><i class="fab fa-facebook-f"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"><i class="fab fa-twitter"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"><i class="fab fa-instagram"></i></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
   </header>
 
 
-  <div gdArea="side1">
-    <app-employee-form></app-employee-form>
+  <header class="row">
+    <mat-card class="col-md-12">Angajati</mat-card>
+  </header>
+
+
+
+  <div class="row content ">
+
+    <div class="col-md-4">
+      <app-employee-form></app-employee-form>
+    </div>
+
+    <div class="col-md-8">
+
+      <mat-card>Lista Angajati</mat-card>
+
+      <mat-form-field>
+        <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filtru">
+      </mat-form-field>
+
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
+
+        <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Nume </th>
+          <td mat-cell *matCellDef="let employee"> {{employee.name}} </td>
+        </ng-container>
+
+        <!-- Phone Number Column -->
+        <ng-container matColumnDef="phoneNumber">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Telefon </th>
+          <td mat-cell *matCellDef="let employee"> {{employee.phoneNumber}} </td>
+        </ng-container>
+
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+
+      <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+
+    </div>
+
   </div>
 
-  <div gdArea="content">
 
-    <mat-form-field>
-      <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filtru">
-    </mat-form-field>
+  <footer class="page-footer font-small teal pt-4 row">
 
-    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
+    <!-- Footer Text -->
+    <div class="container-fluid text-center text-md-left">
 
-      <!--- Note that these columns can be defined in any order.
-      The actual rendered columns are set as a property on the row definition" -->
-      <!-- Position Column -->
-      <ng-container matColumnDef="name" mat-sort-header>
-        <th mat-header-cell *matHeaderCellDef> Nume </th>
-        <td mat-cell *matCellDef="let employee"> {{employee.name}} </td>
-      </ng-container>
+      <!-- Grid row -->
+      <div class="row">
 
-      <!-- Name Column -->
-      <ng-container matColumnDef="phoneNumber" mat-sort-header>
-        <th mat-header-cell *matHeaderCellDef> Telefon </th>
-        <td mat-cell *matCellDef="let employee"> {{employee.phoneNumber}} </td>
-      </ng-container>
-      
+        <!-- Grid column -->
+        <div class="col-md-6 mt-md-0 mt-3">
 
-      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-    </table>
+          <!-- Content -->
+          <h5 class="text-uppercase font-weight-bold">Footer text 1</h5>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita sapiente sint, nulla, nihil repudiandae commodi voluptatibus corrupti animi sequi aliquid magnam debitis, maxime quam recusandae harum esse fugiat. Itaque, culpa?</p>
 
-    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+        </div>
+        <!-- Grid column -->
 
-  </div>
+        <hr class="clearfix w-100 d-md-none pb-3">
 
+        <!-- Grid column -->
+        <div class="col-md-6 mb-md-0 mb-3">
 
-  <footer gdArea="footer">
-    Footer
+          <!-- Content -->
+          <h5 class="text-uppercase font-weight-bold">Footer text 2</h5>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio deserunt fuga perferendis modi earum commodi aperiam temporibus quod nulla nesciunt aliquid debitis ullam omnis quos ipsam, aspernatur id excepturi hic.</p>
+
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row -->
+
+    </div>
+    <!-- Footer Text -->
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">
+      © 2018 Copyright:
+      <a href="https://mdbootstrap.com/education/angular/"> MDBootstrap.com</a>
+    </div>
+    <!-- Copyright -->
+
   </footer>
 
 </div>

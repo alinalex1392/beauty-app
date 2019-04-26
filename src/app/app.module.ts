@@ -24,6 +24,10 @@ import { SchedulerModule } from 'angular-calendar-scheduler';
 import { TestCalendarComponent } from './calendar-example/test-calendar/test-calendar.component';
 
 
+import { AngularBootstrapMaterialModule } from './angular-bootstrap-material/angular-bootstrap-material.module';
+
+
+
 
 
 
@@ -45,6 +49,7 @@ import { TestCalendarComponent } from './calendar-example/test-calendar/test-cal
     AppRoutingModule,
     FormsModule,
     DemoModule,
+    AngularBootstrapMaterialModule,
     //SchedulerModule.forRoot({ locale: 'en', headerDateFormat: 'daysRange' }),
     //CalendarModule.forRoot({ provide: DateAdapter, useFactory: adapterFactory }),
   

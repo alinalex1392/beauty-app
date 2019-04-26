@@ -6,7 +6,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 
-import { MatPaginatorModule, MatTableModule } from '@angular/material';
+import { MatSortModule ,MatPaginatorModule, MatTableModule } from '@angular/material';
 
 
 
@@ -26,7 +26,8 @@ import { MatPaginatorModule, MatTableModule } from '@angular/material';
     MatFormFieldModule,
     MatInputModule,
     MatTableModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatSortModule
     
   ]
 })

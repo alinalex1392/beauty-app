@@ -1,17 +1,24 @@
 div > div, header, footer {
   padding: 20px;
-  background: green;
+  /*background: green;*/
 }
 
-.container {
-  height: 100vh;
+
+
+/*.container-fluid {
+  height: 100%;
   margin: 0;
-}
+}*/
+
+
 
 table {
   width: 100%;
 }
 
+th.mat-sort-header-sorted {
+  color: black;
+}
 .mat-form-field {
   font-size: 14px;
   width: 100%;
@@ -20,3 +27,18 @@ table {
 td, th {
   width: 25%;
 }
+
+
+/*.example-container {
+  max-height: 800px;
+  overflow: auto;
+}*/
+
+/*.content {
+
+  height: 80%;
+
+}*/
+
+
+
